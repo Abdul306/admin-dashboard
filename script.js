@@ -189,3 +189,33 @@ window.addEventListener("resize", () => {
     }
 
 });
+
+/* =========================
+   ORDER SEARCH
+========================= */
+
+const orderSearch = document.getElementById("orderSearch");
+
+if (orderSearch) {
+
+    orderSearch.addEventListener("input", () => {
+
+        const searchValue = orderSearch.value.toLowerCase();
+
+        const orderRows = document.querySelectorAll("tbody tr");
+
+        orderRows.forEach(row => {
+
+            const rowText = row.textContent.toLowerCase();
+
+            if (rowText.includes(searchValue)) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+
+        });
+
+    });
+
+}
