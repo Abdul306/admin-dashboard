@@ -1,1 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Admin Dashboard | Abduljabbar Musa</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <h2>Admin<span>Pro</span></h2>
+
+            <button class="close-sidebar" id="closeSidebar">
+                ×
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="#dashboard" class="nav-link active">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="#orders" class="nav-link">
+                <span>📦</span>
+                Orders
+            </a>
+
+            <a href="#products" class="nav-link">
+                <span>🛍️</span>
+                Products
+            </a>
+
+            <a href="#customers" class="nav-link">
+                <span>👥</span>
+                Customers
+            </a>
+
+            <a href="#analytics" class="nav-link">
+                <span>📈</span>
+                Analytics
+            </a>
+
+            <a href="#messages" class="nav-link">
+                <span>💬</span>
+                Messages
+            </a>
+
+            <a href="#settings" class="nav-link">
+                <span>⚙️</span>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>AdminPro Dashboard</p>
+            <small>v1.0.0</small>
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
+
+            <div class="topbar-title">
+                <h1>Dashboard</h1>
+                <p>Welcome back, Admin 👋</p>
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="icon-button" title="Notifications">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <button class="icon-button" id="themeToggle" title="Toggle theme">
+                    🌙
+                </button>
+
+                <div class="admin-profile">
+                    <div class="profile-avatar">
+                        AM
+                    </div>
+
+                    <div class="profile-info">
+                        <strong>Admin</strong>
+                        <span>Administrator</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             DASHBOARD CONTENT
+        ========================== -->
+
+        <section class="dashboard-content" id="dashboard">
+
+            <!-- STATISTICS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        💰
+                    </div>
+
+                    <div class="stat-info">
+                        <p>Total Revenue</p>
+                        <h2>₦1,250,000</h2>
+                        <span class="positive">↑ 12.5% this month</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        📦
+                    </div>
+
+                    <div class="stat-info">
+                        <p>Total Orders</p>
+                        <h2>1,284</h2>
+                        <span class="positive">↑ 8.2% this month</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        👥
+                    </div>
+
+                    <div class="stat-info">
+                        <p>Total Customers</p>
+                        <h2>8,549</h2>
+                        <span class="positive">↑ 5.7% this month</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        🛒
+                    </div>
+
+                    <div class="stat-info">
+                        <p>Products Sold</p>
+                        <h2>3,642</h2>
+                        <span class="negative">↓ 2.4% this month</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHART + QUICK SUMMARY -->
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-card chart-card" id="analytics">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h2>Revenue Overview</h2>
+                            <p>Monthly revenue performance</p>
+                        </div>
+
+                        <select id="chartFilter">
+                            <option value="monthly">Monthly</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+
+                    </div>
+
+                    <div class="chart">
+
+                        <div class="chart-bars">
+
+                            <div class="bar-wrapper">
+                                <div class="bar" style="height: 45%"></div>
+                                <span>Jan</span>
+                            </div>
+
+                            <div class="bar-wrapper">
+                                <div class="bar" style="height: 65%"></div>
+                                <span>Feb</span>
+                            </div>
+
+                            <div class="bar-wrapper">
+                                <div class="bar" style="height: 55%"></div>
+                                <span>Mar</span>
+                            </div>
+
+                            <div class="bar-wrapper">
+                                <div class="bar" style="height: 75%"></div>
+                                <span>Apr</span>
+                            </div>
+
+                            <div class="bar-wrapper">
+                                <div class="bar" style="height: 60%"></div>
+                                <span>May</span>
+                            </div>
+
+                            <div class="bar-wrapper">
+                                <div class="bar" style="height: 85%"></div>
+                                <span>Jun</span>
+                            </div>
+
+                            <div class="bar-wrapper">
+                                <div class="bar" style="height: 95%"></div>
+                                <span>Jul</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK SUMMARY -->
+
+                <div class="dashboard-card summary-card">
+
+                    <div class="card-header">
+                        <div>
+                            <h2>Sales Summary</h2>
+                            <p>This month's performance</p>
+                        </div>
+                    </div>
+
+                    <div class="summary-list">
+
+                        <div class="summary-item">
+                            <span>Online Sales</span>
+                            <strong>₦680,000</strong>
+                        </div>
+
+                        <div class="summary-item">
+                            <span>Store Sales</span>
+                            <strong>₦420,000</strong>
+                        </div>
+
+                        <div class="summary-item">
+                            <span>Other Revenue</span>
+                            <strong>₦150,000</strong>
+                        </div>
+
+                        <div class="summary-total">
+                            <span>Total</span>
+                            <strong>₦1,250,000</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECENT ORDERS -->
+
+            <div class="dashboard-card orders-card" id="orders">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Recent Orders</h2>
+                        <p>Latest customer orders</p>
+                    </div>
+
+                    <button class="view-all">
+                        View All
+                    </button>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Product</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>#ORD-1001</td>
+                                <td>John Doe</td>
+                                <td>Wireless Headphones</td>
+                                <td>₦85,000</td>
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>Aug 10, 2026</td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-1002</td>
+                                <td>Sarah Ahmed</td>
+                                <td>Smart Watch</td>
+                                <td>₦120,000</td>
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+                                <td>Aug 10, 2026</td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-1003</td>
+                                <td>Michael James</td>
+                                <td>Laptop Stand</td>
+                                <td>₦45,000</td>
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>Aug 9, 2026</td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-1004</td>
+                                <td>Aisha Bello</td>
+                                <td>USB-C Hub</td>
+                                <td>₦35,000</td>
+                                <td>
+                                    <span class="status cancelled">
+                                        Cancelled
+                                    </span>
+                                </td>
+                                <td>Aug 9, 2026</td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-1005</td>
+                                <td>David Smith</td>
+                                <td>Mechanical Keyboard</td>
+                                <td>₦75,000</td>
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>Aug 8, 2026</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTS -->
+
+            <div class="dashboard-card" id="products">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Top Products</h2>
+                        <p>Best performing products</p>
+                    </div>
+
+                </div>
+
+                <div class="products-list">
+
+                    <div class="product-row">
+
+                        <div class="product-image">
+                            🎧
+                        </div>
+
+                        <div class="product-details">
+                            <strong>Wireless Headphones</strong>
+                            <span>324 sold</span>
+                        </div>
+
+                        <strong>₦85,000</strong>
+
+                    </div>
+
+
+                    <div class="product-row">
+
+                        <div class="product-image">
+                            ⌚
+                        </div>
+
+                        <div class="product-details">
+                            <strong>Smart Watch</strong>
+                            <span>278 sold</span>
+                        </div>
+
+                        <strong>₦120,000</strong>
+
+                    </div>
+
+
+                    <div class="product-row">
+
+                        <div class="product-image">
+                            ⌨️
+                        </div>
+
+                        <div class="product-details">
+                            <strong>Mechanical Keyboard</strong>
+                            <span>194 sold</span>
+                        </div>
+
+                        <strong>₦75,000</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOMERS -->
+
+            <div class="dashboard-card" id="customers">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Customer Overview</h2>
+                        <p>Current customer statistics</p>
+                    </div>
+
+                </div>
+
+                <div class="customer-stats">
+
+                    <div>
+                        <strong>8,549</strong>
+                        <span>Total Customers</span>
+                    </div>
+
+                    <div>
+                        <strong>1,240</strong>
+                        <span>New Customers</span>
+                    </div>
+
+                    <div>
+                        <strong>7,309</strong>
+                        <span>Returning Customers</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MESSAGES -->
+
+            <div class="dashboard-card" id="messages">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Recent Messages</h2>
+                        <p>Latest customer communication</p>
+                    </div>
+
+                </div>
+
+                <div class="messages-list">
+
+                    <div class="message-item">
+                        <div class="message-avatar">JD</div>
+
+                        <div>
+                            <strong>John Doe</strong>
+                            <p>I'd like to know more about my recent order.</p>
+                            <small>10 minutes ago</small>
+                        </div>
+                    </div>
+
+
+                    <div class="message-item">
+                        <div class="message-avatar">SA</div>
+
+                        <div>
+                            <strong>Sarah Ahmed</strong>
+                            <p>When will my order be delivered?</p>
+                            <small>35 minutes ago</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SETTINGS -->
+
+            <div class="dashboard-card" id="settings">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Settings</h2>
+                        <p>Manage your dashboard preferences</p>
+                    </div>
+
+                </div>
+
+                <div class="settings-list">
+
+                    <div class="setting-item">
+                        <div>
+                            <strong>Email Notifications</strong>
+                            <p>Receive notifications about new orders.</p>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+
+                    <div class="setting-item">
+                        <div>
+                            <strong>Automatic Reports</strong>
+                            <p>Receive weekly performance reports.</p>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 AdminPro Dashboard. Built by Abduljabbar Musa.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- OVERLAY -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
