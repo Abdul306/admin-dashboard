@@ -1237,4 +1237,17 @@ body.dark-mode .message-avatar {
     .dashboard-footer {
         padding: 20px;
     }
+
+.order-tools {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+}
+
+#orderSearch {
+    width: 100%;
+}
+   
 }
