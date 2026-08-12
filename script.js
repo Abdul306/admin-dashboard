@@ -83,19 +83,75 @@ if (themeToggle) {
    NOTIFICATIONS
 ========================= */
 
+/* =========================
+   NOTIFICATION DROPDOWN
+========================= */
+
 const notificationButton =
-    document.querySelector(".icon-button[title='Notifications']");
+    document.getElementById("notificationBtn");
 
-if (notificationButton) {
+const notificationDropdown =
+    document.getElementById("notificationDropdown");
 
-    notificationButton.addEventListener("click", () => {
+const markRead =
+    document.getElementById("markRead");
 
-        alert("You have 3 recent notifications.");
+const notificationDot =
+    document.querySelector(".notification-dot");
+
+
+if (notificationButton && notificationDropdown) {
+
+    notificationButton.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+        notificationDropdown.classList.toggle("active");
 
     });
 
 }
 
+
+/* Close notification when clicking outside */
+
+document.addEventListener("click", (event) => {
+
+    if (
+        notificationDropdown &&
+        !notificationDropdown.contains(event.target) &&
+        !notificationButton.contains(event.target)
+    ) {
+
+        notificationDropdown.classList.remove("active");
+
+    }
+
+});
+
+
+/* Mark notifications as read */
+
+if (markRead) {
+
+    markRead.addEventListener("click", () => {
+
+        if (notificationDot) {
+            notificationDot.style.display = "none";
+        }
+
+        const notificationCount =
+            document.querySelector(".notification-header span");
+
+        if (notificationCount) {
+            notificationCount.textContent = "All notifications read";
+        }
+
+        markRead.textContent = "Done";
+
+    });
+
+}
 
 /* =========================
    CHART FILTER
