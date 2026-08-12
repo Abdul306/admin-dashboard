@@ -1475,3 +1475,141 @@ body.dark-mode .notification-item p {
 }
    
 }
+
+/* =========================
+   FINAL MOBILE POLISH
+========================= */
+
+@media (max-width: 480px) {
+
+    /* Topbar */
+
+    .topbar {
+        min-height: 70px;
+        padding: 12px 15px;
+    }
+
+    .topbar-title h1 {
+        font-size: 1.1rem;
+    }
+
+    .dashboard-content {
+        padding: 20px 15px;
+    }
+
+
+    /* Date and time */
+
+    .dashboard-date {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 2px;
+
+        font-size: 0.68rem;
+    }
+
+
+    /* Dashboard cards */
+
+    .dashboard-card {
+        padding: 17px;
+
+        border-radius: 12px;
+    }
+
+
+    /* Statistics */
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    .stat-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 1.2rem;
+    }
+
+    .stat-info h2 {
+        font-size: 1.2rem;
+    }
+
+
+    /* Card headers */
+
+    .card-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+
+    /* Order search */
+
+    .order-tools {
+        width: 100%;
+    }
+
+    #orderSearch {
+        width: 100%;
+    }
+
+
+    /* Chart */
+
+    .chart {
+        height: 200px;
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .chart-bars {
+        gap: 6px;
+    }
+
+    .bar {
+        max-width: 35px;
+    }
+
+
+    /* Customer statistics */
+
+    .customer-stats {
+        gap: 10px;
+    }
+
+    .customer-stats div {
+        padding: 17px;
+    }
+
+    .customer-stats strong {
+        font-size: 1.6rem;
+    }
+
+
+    /* Notifications */
+
+    .notification-dropdown {
+        top: 65px;
+
+        right: 10px;
+
+        width: calc(100vw - 20px);
+    }
+
+
+    /* Footer */
+
+    .dashboard-footer {
+        padding: 20px 15px;
+
+        font-size: 0.75rem;
+    }
+
+}
