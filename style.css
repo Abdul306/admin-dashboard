@@ -672,6 +672,50 @@ td {
     color: #b91c1c;
 }
 
+.order-tools {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#orderSearch {
+    width: 190px;
+
+    padding: 9px 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    font-size: 0.85rem;
+
+    transition: 0.3s;
+}
+
+#orderSearch:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+body.dark-mode #orderSearch {
+    background: #13243a;
+
+    border-color: #263b56;
+
+    color: #e2e8f0;
+}
+
+body.dark-mode #orderSearch::placeholder {
+    color: #64748b;
+}
+
 
 /* =========================
    PRODUCTS
