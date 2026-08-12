@@ -219,3 +219,53 @@ if (orderSearch) {
     });
 
 }
+
+/* =========================
+   ANIMATED STATISTICS
+========================= */
+
+const statNumbers = document.querySelectorAll(".stat-number");
+
+statNumbers.forEach(stat => {
+
+    const target = Number(stat.dataset.target);
+
+    let current = 0;
+
+    const duration = 1500;
+
+    const increment = target / (duration / 20);
+
+    const updateNumber = () => {
+
+        current += increment;
+
+        if (current < target) {
+
+            if (target === 1250000) {
+                stat.textContent =
+                    "₦" + Math.floor(current).toLocaleString();
+            } else {
+                stat.textContent =
+                    Math.floor(current).toLocaleString();
+            }
+
+            setTimeout(updateNumber, 20);
+
+        } else {
+
+            if (target === 1250000) {
+                stat.textContent =
+                    "₦" + target.toLocaleString();
+            } else {
+                stat.textContent =
+                    target.toLocaleString();
+            }
+
+        }
+
+    };
+
+    updateNumber();
+
+});
