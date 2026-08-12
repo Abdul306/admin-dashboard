@@ -93,10 +93,76 @@
 
             <div class="topbar-actions">
 
-                <button class="icon-button" title="Notifications">
-                    🔔
-                    <span class="notification-dot"></span>
-                </button>
+              <div class="notification-wrapper">
+
+    <button
+        class="icon-button"
+        id="notificationBtn"
+        title="Notifications"
+    >
+        🔔
+        <span class="notification-dot"></span>
+    </button>
+
+    <div class="notification-dropdown" id="notificationDropdown">
+
+        <div class="notification-header">
+            <div>
+                <h3>Notifications</h3>
+                <span>3 new notifications</span>
+            </div>
+
+            <button id="markRead">
+                Mark all read
+            </button>
+        </div>
+
+
+        <div class="notification-list">
+
+            <div class="notification-item">
+                <div class="notification-icon blue">
+                    📦
+                </div>
+
+                <div>
+                    <strong>New order received</strong>
+                    <p>Order #ORD-1006 has been placed.</p>
+                    <small>5 minutes ago</small>
+                </div>
+            </div>
+
+
+            <div class="notification-item">
+                <div class="notification-icon green">
+                    👤
+                </div>
+
+                <div>
+                    <strong>New customer</strong>
+                    <p>A new customer registered today.</p>
+                    <small>20 minutes ago</small>
+                </div>
+            </div>
+
+
+            <div class="notification-item">
+                <div class="notification-icon orange">
+                    💰
+                </div>
+
+                <div>
+                    <strong>Payment received</strong>
+                    <p>₦85,000 payment was received.</p>
+                    <small>1 hour ago</small>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
                 <button class="icon-button" id="themeToggle" title="Toggle theme">
                     🌙
