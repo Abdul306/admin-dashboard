@@ -193,6 +193,33 @@ input {
 
     font-size: 0.9rem;
 }
+.dashboard-date {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 5px;
+
+    color: #94a3b8;
+
+    font-size: 0.75rem;
+}
+
+.dashboard-date span:last-child {
+    color: #2563eb;
+
+    font-weight: 700;
+}
+
+body.dark-mode .dashboard-date {
+    color: #64748b;
+}
+
+body.dark-mode .dashboard-date span:last-child {
+    color: #60a5fa;
+}
 
 .topbar-actions {
     display: flex;
