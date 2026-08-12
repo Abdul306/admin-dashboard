@@ -60,24 +60,70 @@ navLinks.forEach(link => {
 
 const themeToggle = document.getElementById("themeToggle");
 
+
+function updateThemeButton() {
+
+    if (!themeToggle) return;
+
+    if (document.body.classList.contains("dark-mode")) {
+
+        themeToggle.textContent = "☀️";
+        themeToggle.title = "Switch to light mode";
+
+    } else {
+
+        themeToggle.textContent = "🌙";
+        themeToggle.title = "Switch to dark mode";
+
+    }
+
+}
+
+
+/* Load saved theme */
+
+const savedTheme = localStorage.getItem("dashboardTheme");
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add("dark-mode");
+
+}
+
+updateThemeButton();
+
+
+/* Change theme */
+
 if (themeToggle) {
 
     themeToggle.addEventListener("click", () => {
 
         document.body.classList.toggle("dark-mode");
 
+
         if (document.body.classList.contains("dark-mode")) {
-            themeToggle.textContent = "☀️";
-            themeToggle.title = "Switch to light mode";
+
+            localStorage.setItem(
+                "dashboardTheme",
+                "dark"
+            );
+
         } else {
-            themeToggle.textContent = "🌙";
-            themeToggle.title = "Switch to dark mode";
+
+            localStorage.setItem(
+                "dashboardTheme",
+                "light"
+            );
+
         }
+
+
+        updateThemeButton();
 
     });
 
 }
-
 
 /* =========================
    NOTIFICATIONS
